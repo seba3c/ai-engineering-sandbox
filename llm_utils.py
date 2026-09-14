@@ -13,8 +13,8 @@ def load_api_key(key_name="OPENAI_API_KEY"):
     return api_key
 
 
-def get_llm_client(api_key=None, base_url=None):
-    client = OpenAI(api_key=api_key, base_url=base_url)
+def get_llm_client(**kwargs):
+    client = OpenAI(**kwargs)
     return client
 
 
